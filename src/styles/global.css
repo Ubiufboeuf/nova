@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: Inter;
+  src: 
+    local('Inter'),
+    url('/Inter.woff2') format('woff2');
+}
+
+:root {
+  font-family: system-ui;
+}
+
 html,
 body {
   height: 100%;
