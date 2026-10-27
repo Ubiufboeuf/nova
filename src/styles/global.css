@@ -1,5 +1,83 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: Inter, system-ui, sans-serif;
+
+  /* Superficies */
+  --color-page: #ffffff;
+  --color-card: #ffffff;
+  --color-elev: #f1f5f9;
+  --color-sunk: #ffffff;
+  --color-line: #e5e7eb;
+
+  /* Marca y acentos */
+  --color-brand: #0f2a43;
+  --color-cta: #d9622b;
+  --color-accent: #d9622b;
+  --color-on-accent: #ffffff;
+  --color-promo: #fdeee6;
+  --color-ink: #1e293b;
+  --color-navy: #0f2a43;
+
+  /* Hero */
+  --color-hero-1: #0f2a43;
+  --color-hero-2: #134e4a;
+  --color-hero-3: #1d4e89;
+
+  /* Estados */
+  --color-ok: #047857;
+  --color-err: #dc2626;
+
+  /* Escala slate */
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+}
+
+/* ───────── Tema oscuro (grafito) ───────── */
+.dark {
+  color-scheme: dark;
+
+  --color-page: #111315;
+  --color-card: #1b1e22;
+  --color-elev: #252a30;
+  --color-sunk: #16191c;
+  --color-line: #343a42;
+
+  --color-brand: #6caaf0;
+  --color-cta: #6caaf0;
+  --color-accent: #f07845;
+  --color-on-accent: #111315;
+  --color-promo: #2a1f1a;
+  --color-ink: #252a30;
+  --color-navy: #252a30;
+
+  --color-hero-1: #252a30;
+  --color-hero-2: #222c2e;
+  --color-hero-3: #242c38;
+
+  --color-ok: #6ee7b7;
+  --color-err: #f87171;
+
+  --color-slate-50: #1f2328;
+  --color-slate-100: #252a30;
+  --color-slate-200: #343a42;
+  --color-slate-300: #58606b;
+  --color-slate-400: #7c848f;
+  --color-slate-500: #a3aab4;
+  --color-slate-600: #b5bbc3;
+  --color-slate-700: #c9ced4;
+  --color-slate-800: #e2e5e9;
+  --color-slate-900: #f1f3f5;
+}
+
 @font-face {
   font-family: Inter;
   src: 
