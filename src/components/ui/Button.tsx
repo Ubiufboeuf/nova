@@ -13,7 +13,7 @@ export function Button ({ children, class: className = '', color }: Props) {
   
   return (
     <button
-      class={`${className} ${btnColor} transition-colors cursor-pointer`}
+      class={`${className} ${btnColor} flex items-center justify-center transition-colors cursor-pointer`}
     >
       {children}
     </button>
