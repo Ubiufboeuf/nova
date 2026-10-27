@@ -1,5 +1,5 @@
-import { SearchBar } from './search/SearchBar'
-import { SearchButton } from './search/SearchButton'
+import { SearchBar } from '../layout/search/SearchBar'
+import { SearchButton } from '../layout/search/SearchButton'
 
 export function GlobalSearchBar () {
   return (
