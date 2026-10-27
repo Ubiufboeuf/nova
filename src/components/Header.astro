@@ -1,0 +1,22 @@
+---
+import { GlobalSearchBar } from './header/GlobalSearchBar'
+import HeaderActions from './header/HeaderActions.astro'
+
+const navigation = [
+  { href: '/category/technology', label: 'Tecnología' }
+]
+---
+
+<header class='sticky top-0 w-full h-fit'>
+  <div class='h-16 flex items-center gap-2 p-3'>
+    <a href='/' class='h-fit w-fit flex text-2xl font-black p-1 px-2'>
+      NOVA
+      <span class='text-accent'>.</span>
+    </a>
+    <GlobalSearchBar />
+    <HeaderActions />
+  </div>
+  <nav>
+    { navigation.map(({ href, label }) => <a href={href}>{label}</a>) }
+  </nav>
+</header>
