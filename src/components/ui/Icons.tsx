@@ -77,3 +77,9 @@ export const IconShoppingCart = () => (
     <path d='M6 5l14 1l-1 7h-13' />
   </Svg>
 )
+
+export const IconChevron = () => (
+  <Svg>
+    <path d='M9 6l6 6l-6 6' />
+  </Svg>
+)
