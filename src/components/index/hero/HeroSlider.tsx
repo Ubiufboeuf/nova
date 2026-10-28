@@ -52,7 +52,7 @@ export function HeroSlider () {
   }
   
   return (
-    <div class='relative h-96 w-full rounded-lg overflow-hidden bg-slate-100'>
+    <div class='row-span-full relative h-96 w-full rounded-lg overflow-hidden bg-slate-100'>
       { slides.map(({ banner }, idx) => (
         <img key={banner} src={banner} class={`${currentSlideIndex === idx ? 'active' : ''} absolute z-0 h-full w-full object-cover transition-opacity opacity-0 [.active]:opacity-100`} />
       )) }
