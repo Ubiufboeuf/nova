@@ -1,8 +1,8 @@
 {
   "conventionalCommits.scopes": [
     "layout",
-    "types",
-    "components",
+    "type",
+    "component",
     "page"
   ]
 }
