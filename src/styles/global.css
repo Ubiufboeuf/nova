@@ -42,7 +42,7 @@
 }
 
 /* ───────── Tema oscuro (grafito) ───────── */
-.dark {
+[data-theme='dark'] {
   color-scheme: dark;
 
   --color-page: #111315;
@@ -76,6 +76,12 @@
   --color-slate-700: #c9ced4;
   --color-slate-800: #e2e5e9;
   --color-slate-900: #f1f3f5;
+}
+
+@custom-variant dark {
+  &:where([data-theme='dark'] *) {
+    @slot;
+  }
 }
 
 @font-face {

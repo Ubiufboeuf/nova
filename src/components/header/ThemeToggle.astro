@@ -1,0 +1,28 @@
+---
+import { Button } from '../ui/Button'
+import { Icon } from '../ui/Icon'
+import { IconMoon, IconSun } from '../ui/Icons'
+---
+
+<Button id='theme-toggle' class='h-full aspect-square rounded-md text-slate-800 hover:bg-slate-200 active:bg-slate-300'>
+  <Icon class='size-6 not-dark:hidden'>
+    <IconMoon />
+  </Icon>
+  <Icon class='size-6 dark:hidden'>
+    <IconSun />
+  </Icon>
+</Button>
+
+<script>
+  const btn = document.querySelector('#theme-toggle')
+  btn?.addEventListener('click', toggleTheme)
+
+  function toggleTheme () {
+    const html = document.documentElement
+    const theme = html.getAttribute('data-theme')
+    const newTheme = (theme === 'dark') ? 'light' : 'dark'
+    html.setAttribute('data-theme', newTheme)
+    btn!.setAttribute('data-theme', newTheme)
+    document.cookie = `nova-theme=${newTheme}; path=/`
+  }
+</script>
