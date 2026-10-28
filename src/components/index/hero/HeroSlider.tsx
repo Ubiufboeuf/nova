@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/Button'
 import { Icon } from '@/components/ui/Icon'
 import { IconChevron } from '@/components/ui/Icons'
 import { SlideIndicator } from '@/components/ui/slider/SlideIndicator'
-import { useState } from 'preact/hooks'
+import { useEffect, useRef, useState } from 'preact/hooks'
 
 interface Slide {
   banner: string
@@ -42,17 +42,38 @@ const slides: Slide[] = [
 export function HeroSlider () {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
   const { badge, title, description, btn } = slides[currentSlideIndex]
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
 
   function previousSlide () {
-    setCurrentSlideIndex(currentSlideIndex <= 0 ? slides.length - 1 : currentSlideIndex - 1)
+    setCurrentSlideIndex(prev => (prev - 1 + slides.length) % slides.length)
   }
 
   function nextSlide () {
-    setCurrentSlideIndex(currentSlideIndex >= slides.length - 1 ? 0 : currentSlideIndex + 1)
+    setCurrentSlideIndex(prev => (prev + 1) % slides.length)
   }
+
+  function stopSlide () {
+    if (intervalRef.current !== null) {
+      clearInterval(intervalRef.current)
+      intervalRef.current = null
+    }
+  }
+
+  function startSlide () {
+    stopSlide()
+    
+    intervalRef.current = setInterval(() => {
+      nextSlide()
+    }, 5000)
+  }
+
+  useEffect(() => {
+    startSlide()
+    return () => stopSlide()
+  }, [])
   
   return (
-    <div class='row-span-full relative h-96 w-full rounded-lg overflow-hidden bg-slate-100'>
+    <div class='row-span-full relative h-96 w-full rounded-lg overflow-hidden bg-slate-100' onMouseEnter={stopSlide} onMouseLeave={startSlide}>
       { slides.map(({ banner }, idx) => (
         <img key={banner} src={banner} class={`${currentSlideIndex === idx ? 'active' : ''} absolute z-0 h-full w-full object-cover transition-opacity opacity-0 [.active]:opacity-100`} />
       )) }
