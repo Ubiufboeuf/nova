@@ -2,6 +2,7 @@
   "conventionalCommits.scopes": [
     "layout",
     "types",
-    "components"
+    "components",
+    "page"
   ]
 }
