@@ -1,18 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import HeroSlider from '@/components/index/HeroSlider.astro'
+import HeroSection from '@/components/index/HeroSection.astro'
+import StoreBenefits from '@/components/index/StoreBenefits.astro'
 import FeaturedCategories from '@/components/index/FeaturedCategories.astro'
+import DailyDeals from '@/components/index/DailyDeals.astro'
+import FeaturedPromotion from '@/components/index/FeaturedPromotion.astro'
 import BestSellers from '@/components/index/BestSellers.astro'
 import PromoBanners from '@/components/index/PromoBanners.astro'
-import SpecialOffers from '@/components/index/SpecialOffers.astro'
 import NewArrivals from '@/components/index/NewArrivals.astro'
+import Newsletter from '@/components/index/Newsletter.astro'
 ---
 
 <Layout>
-  <HeroSlider />
+  <HeroSection />
+  <StoreBenefits />
   <FeaturedCategories />
+  <DailyDeals />
+  <FeaturedPromotion />
   <BestSellers />
   <PromoBanners />
-  <SpecialOffers />
   <NewArrivals />
+  <Newsletter />
 </Layout>
