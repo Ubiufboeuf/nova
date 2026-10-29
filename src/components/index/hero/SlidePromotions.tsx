@@ -5,7 +5,7 @@ const promotions = [
     title: 'Smartwatches con GPS y AMOLED',
     price: 7490,
     link: '/',
-    image: '/heroP1.png'
+    image: '/assets/watch.webp'
   },
   {
     id: 'p2',
@@ -13,7 +13,7 @@ const promotions = [
     title: 'Smart TV 4K QLED y Google TV',
     price: 24990,
     link: '/',
-    image: '/heroP2.png'
+    image: '/assets/tv.webp'
   }
 ]
 
