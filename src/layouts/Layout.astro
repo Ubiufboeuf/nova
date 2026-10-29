@@ -29,7 +29,7 @@ const savedTheme = Astro.cookies.get('nova-theme')?.value
       }
     </script>
 	</head>
-	<body>
+	<body class='h-full min-h-fit'>
 		<Header />
 		<main class={className}>
 			<slot />
