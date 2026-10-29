@@ -36,7 +36,7 @@ export function SlidePromotions () {
           </svg>
         </span>
       </div>
-      <img src={image} loading='lazy' class='h-28 w-28 shrink-0 object-contain mix-blend-multiply transition-transform duration-300 group-hover:scale-105' />
+      <img src={image} loading='lazy' class='h-28 w-28 shrink-0 object-contain transition-transform duration-300 group-hover:scale-105' />
     </a>
   ))
 }
