@@ -83,3 +83,37 @@ export const IconChevron = () => (
     <path d='M9 6l6 6l-6 6' />
   </Svg>
 )
+
+export const IconTruck = () => (
+  <Svg>
+    <path d='M5 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0' />
+    <path d='M15 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0' />
+    <path d='M5 17h-2v-11a1 1 0 0 1 1 -1h9v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5' />
+  </Svg>
+)
+
+export const IconCredit = () => (
+  <Svg>
+    <path d='M3 8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3l0 -8' />
+    <path d='M3 10l18 0' />
+    <path d='M7 15l.01 0' />
+    <path d='M11 15l2 0' />
+  </Svg>
+)
+
+export const IconStore = () => (
+  <Svg>
+    <path d='M3 21l18 0' />
+    <path d='M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4' />
+    <path d='M5 21l0 -10.15' />
+    <path d='M19 21l0 -10.15' />
+    <path d='M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4' />
+  </Svg>
+)
+
+export const IconReload = () => (
+  <Svg>
+    <path d='M19.933 13.041a8 8 0 1 1 -9.925 -8.788c3.899 -1 7.935 1.007 9.425 4.747' />
+    <path d='M20 4v5h-5' />
+  </Svg>
+)
