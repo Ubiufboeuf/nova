@@ -42,6 +42,10 @@
   --color-slate-700: oklch(0.3 0.012 260);
   --color-slate-800: oklch(0.2 0.012 260);
   --color-slate-900: oklch(0.15 0.012 260);
+
+  /* Inline */
+  --shadow-card: 0 1px 2px oklch(0.2 0.01 60 / 0.04), 0 8px 24px -12px oklch(0.2 0.01 60 / 0.18);
+  --shadow-popover: 0 12px 40px -12px oklch(0.2 0.01 60 / 0.28), 0 2px 6px oklch(0.2 0.01 60 / 0.06);
 }
 
 /* ───────── Tema oscuro (grafito) ───────── */

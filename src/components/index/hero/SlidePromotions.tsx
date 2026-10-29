@@ -22,7 +22,7 @@ export function SlidePromotions () {
     <a
       key={id}
       href={link}
-      class='group flex flex-1 items-center gap-3 overflow-hidden rounded-lg border bg-elev border-line p-4 transition-shadow hover:shadow-md shadow-slate-400'
+      class='group flex flex-1 items-center gap-3 overflow-hidden rounded-lg border bg-elev border-line p-4 transition-shadow hover:shadow-card'
     >
       <div class='min-w-0 flex-1'>
         <p class='text-[11px] font-bold uppercase tracking-wider text-accent'>{badge}</p>
