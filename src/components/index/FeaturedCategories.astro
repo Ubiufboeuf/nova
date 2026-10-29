@@ -1,0 +1,28 @@
+---
+const categories = [
+  { id: 'technology', title: 'Tecnología', count: 14, image: '/assets/laptop.webp', href: '#' },
+  { id: 'home', title: 'Hogar', count: 6, image: '/assets/coffee-machine.webp', href: '#' },
+  { id: 'audio', title: 'Audio', count: 7, image: '/assets/headphones.webp', href: '#' },
+  { id: 'gaming', title: 'Gaming', count: 6, image: '/assets/console.webp', href: '#' },
+  { id: 'accessories', title: 'Accesorios', count: 3, image: '/assets/watch.webp', href: '#' },
+  { id: 'offers', title: 'Ofertas', count: 21, image: '/assets/air-fryer.webp', href: '#' },
+  { id: 'appliances', title: 'Electrodomésticos', count: 4, image: '/assets/washing-machine.webp', href: '#' }
+]
+---
+
+<section class='w-full h-fit p-6 py-10 flex flex-col gap-4'>
+  <h1 class='text-2xl font-bold text-slate-900'>Comprá por categoría</h1>
+  <div class='w-full h-fit flex items-center gap-2'>
+    { categories.map(({ id, title, count, image, href }) => (
+      <a href={href} data-category={id} class='group w-full border border-line rounded-lg flex flex-col items-center gap-3 p-3 transition-colors hover:border-brand hover:shadow-card'>
+        <div class='w-full'>
+          <img src={image} alt={title} loading='lazy' class='w-full p-3 bg-elev rounded-md group-hover:scale-105 transition-transform duration-300' />
+        </div>
+        <div class='flex flex-col items-center w-full'>
+          <h2 class='text-sm font-semibold text-slate-800 group-hover:text-brand transition-colors'>{title}</h2>
+          <p class='text-xs text-slate-500 font-light'>{count} productos</p>
+        </div>
+      </a>
+    )) }
+  </div>
+</section>
