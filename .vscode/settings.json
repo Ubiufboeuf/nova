@@ -3,6 +3,7 @@
     "layout",
     "type",
     "component",
-    "page"
+    "page",
+    "utils"
   ]
 }
