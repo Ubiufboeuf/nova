@@ -117,3 +117,17 @@ export const IconReload = () => (
     <path d='M20 4v5h-5' />
   </Svg>
 )
+
+export const IconArrow = () => (
+  <Svg>
+    <path d='M5 12l14 0' />
+    <path d='M13 18l6 -6' />
+    <path d='M13 6l6 6' />
+  </Svg>
+)
+
+export const IconStar = ({ fill = false }: { fill?: boolean }) => (
+  <Svg fill={fill ? 'currentColor' : 'none'}>
+    <path d='M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873l-6.158 -3.245' />
+  </Svg>
+)
