@@ -1,0 +1,416 @@
+---
+import { ProductCard } from '../ui/cards/ProductCard'
+import { Countdown } from './Countdown'
+import { v4 } from 'uuid'
+import type { ProductCardProps } from '@/types/ui/cardTypes'
+
+const deals: ProductCardProps[] = [
+  {
+    id: v4(),
+    link: '#',
+    badges: [
+      { type: 'discount', value: '-19%' }
+    ],
+    image: '/assets/laptop.webp',
+    brand: 'ASUS',
+    product: 'Notebook Zenbook 14 OLED Intel Core Ultra 7 16GB 512GB',
+    rating: { votes: 128, value: 4.7 },
+    price: {
+      base: { currency: 'UYU', value: 52990 },
+      offer: { currency: 'UYU', value: 42990 }
+    },
+    cuotes: {
+      quantity: 12,
+      amount: { currency: 'UYU', value: 3583 }
+    },
+    stockState: 'enough'
+  },
+  {
+    id: v4(),
+    link: '#',
+    badges: [
+      { type: 'discount', value: '-12%' }
+    ],
+    image: '/assets/smartphone.webp',
+    brand: 'SAMSUNG',
+    product: 'Celular Galaxy S24 256GB Onyx Black',
+    rating: { votes: 342, value: 4.8 },
+    price: {
+      base: { currency: 'UYU', value: 41990 },
+      offer: { currency: 'UYU', value: 36990 }
+    },
+    cuotes: {
+      quantity: 12,
+      amount: { currency: 'UYU', value: 3083 }
+    },
+    stockState: 'few'
+  },
+  {
+    id: v4(),
+    link: '#',
+    badges: [
+      { type: 'discount', value: '-22%' }
+    ],
+    image: '/assets/tv.webp',
+    brand: 'TCL',
+    product: 'Smart TV 55" QLED 4K Google TV C655',
+    rating: { votes: 211, value: 4.6 },
+    price: {
+      base: { currency: 'UYU', value: 31990 },
+      offer: { currency: 'UYU', value: 24990 }
+    },
+    cuotes: {
+      quantity: 12,
+      amount: { currency: 'UYU', value: 2083 }
+    },
+    stockState: 'enough'
+  },
+  {
+    id: v4(),
+    link: '#',
+    badges: [
+      { type: 'discount', value: '-25%' }
+    ],
+    image: '/assets/headphones.webp',
+    brand: 'SOUNDCORE',
+    product: 'Auriculares Bluetooth Space Q45 Cancelación de Ruido',
+    rating: { votes: 187, value: 4.6 },
+    price: {
+      base: { currency: 'UYU', value: 7990 },
+      offer: { currency: 'UYU', value: 5990 }
+    },
+    cuotes: {
+      quantity: 6,
+      amount: { currency: 'UYU', value: 998 }
+    },
+    stockState: 'enough'
+  },
+  {
+    id: v4(),
+    link: '#',
+    badges: [
+      { type: 'discount', value: '-15%' },
+      { type: 'new', value: 'Nuevo' }
+    ],
+    image: '/assets/bluetooth-speaker.webp',
+    brand: 'JBL',
+    product: 'Parlante Portátil Flip 6 Resistente al Agua IP67',
+    rating: { votes: 264, value: 4.7 },
+    price: {
+      base: { currency: 'UYU', value: 5490 },
+      offer: { currency: 'UYU', value: 4690 }
+    },
+    cuotes: {
+      quantity: 6,
+      amount: { currency: 'UYU', value: 782 }
+    },
+    stockState: 'enough'
+  },
+  {
+    id: v4(),
+    link: '#',
+    badges: [
+      { type: 'discount', value: '-24%' }
+    ],
+    image: '/assets/keyboard.webp',
+    brand: 'REDRAGON',
+    product: 'Teclado Mecánico Gamer Surara K582 RGB Switch Red',
+    rating: { votes: 158, value: 4.5 },
+    price: {
+      base: { currency: 'UYU', value: 3290 },
+      offer: { currency: 'UYU', value: 2490 }
+    },
+    cuotes: null,
+    stockState: 'enough'
+  },
+  {
+    id: v4(),
+    link: '#',
+    badges: [
+      { type: 'discount', value: '-14%' },
+      { type: 'new', value: 'Nuevo' }
+    ],
+    image: '/assets/coffee-machine.webp',
+    brand: 'BREVILLE',
+    product: 'Cafetera Espresso Barista Express con Molinillo',
+    rating: { votes: 74, value: 4.8 },
+    price: {
+      base: { currency: 'UYU', value: 34990 },
+      offer: { currency: 'UYU', value: 29990 }
+    },
+    cuotes: {
+      quantity: 12,
+      amount: { currency: 'UYU', value: 2499 }
+    },
+    stockState: 'enough'
+  },
+  {
+    id: v4(),
+    link: '#',
+    badges: [
+      { type: 'discount', value: '-28%' }
+    ],
+    image: '/assets/air-fryer.webp',
+    brand: 'COSORI',
+    product: 'Freidora de Aire Digital 5.5 L Pro LE',
+    rating: { votes: 389, value: 4.7 },
+    price: {
+      base: { currency: 'UYU', value: 5990 },
+      offer: { currency: 'UYU', value: 4290 }
+    },
+    cuotes: {
+      quantity: 6,
+      amount: { currency: 'UYU', value: 715 }
+    },
+    stockState: 'enough'
+  },
+  {
+    id: v4(),
+    link: '#',
+    badges: [
+      { type: 'discount', value: '-19%' }
+    ],
+    image: '/assets/watch.webp',
+    brand: 'SAMSUNG',
+    product: 'Galaxy Watch6 Classic 47mm Bluetooth',
+    rating: { votes: 72, value: 4.6 },
+    price: {
+      base: { currency: 'UYU', value: 13490 },
+      offer: { currency: 'UYU', value: 10990 }
+    },
+    cuotes: {
+      quantity: 12,
+      amount: { currency: 'UYU', value: 916 }
+    },
+    stockState: 'enough'
+  },
+  {
+    id: v4(),
+    link: '#',
+    badges: [
+      { type: 'discount', value: '-17%' }
+    ],
+    image: '/assets/laptop.webp',
+    brand: 'HP',
+    product: 'Notebook 15 Intel Core i5 8GB 512GB',
+    rating: { votes: 43, value: 4.4 },
+    price: {
+      base: { currency: 'UYU', value: 28990 },
+      offer: { currency: 'UYU', value: 23990 }
+    },
+    cuotes: {
+      quantity: 12,
+      amount: { currency: 'UYU', value: 1999 }
+    },
+    stockState: 'few'
+  },
+  {
+    id: v4(),
+    link: '#',
+    badges: [
+      { type: 'discount', value: '-17%' }
+    ],
+    image: '/assets/smartphone.webp',
+    brand: 'XIAOMI',
+    product: 'Celular Redmi Note 13 256GB Negro',
+    rating: { votes: 115, value: 4.5 },
+    price: {
+      base: { currency: 'UYU', value: 11990 },
+      offer: { currency: 'UYU', value: 9990 }
+    },
+    cuotes: {
+      quantity: 6,
+      amount: { currency: 'UYU', value: 1665 }
+    },
+    stockState: 'enough'
+  },
+  {
+    id: v4(),
+    link: '#',
+    badges: [
+      { type: 'discount', value: '-14%' }
+    ],
+    image: '/assets/convertible-laptop.webp',
+    brand: 'APPLE',
+    product: 'Tablet iPad 10ª generación 10.9 pulgadas 64GB',
+    rating: { votes: 92, value: 4.8 },
+    price: {
+      base: { currency: 'UYU', value: 21990 },
+      offer: { currency: 'UYU', value: 18990 }
+    },
+    cuotes: {
+      quantity: 12,
+      amount: { currency: 'UYU', value: 1583 }
+    },
+    stockState: 'enough'
+  },
+  {
+    id: v4(),
+    link: '#',
+    badges: [
+      { type: 'discount', value: '-19%' },
+      { type: 'new', value: 'Nuevo' }
+    ],
+    image: '/assets/monitor.webp',
+    brand: 'SAMSUNG',
+    product: 'Monitor Odyssey G5 27 pulgadas QHD 165Hz',
+    rating: { votes: 67, value: 4.7 },
+    price: {
+      base: { currency: 'UYU', value: 15990 },
+      offer: { currency: 'UYU', value: 12990 }
+    },
+    cuotes: {
+      quantity: 12,
+      amount: { currency: 'UYU', value: 1083 }
+    },
+    stockState: 'few'
+  },
+  {
+    id: v4(),
+    link: '#',
+    badges: [
+      { type: 'discount', value: '-17%' }
+    ],
+    image: '/assets/headphones.webp',
+    brand: 'JBL',
+    product: 'Auriculares Tune 520BT Bluetooth',
+    rating: { votes: 96, value: 4.5 },
+    price: {
+      base: { currency: 'UYU', value: 2990 },
+      offer: { currency: 'UYU', value: 2490 }
+    },
+    cuotes: {
+      quantity: 6,
+      amount: { currency: 'UYU', value: 415 }
+    },
+    stockState: 'enough'
+  },
+  {
+    id: v4(),
+    link: '#',
+    badges: [
+      { type: 'discount', value: '-18%' },
+      { type: 'new', value: 'Nuevo' }
+    ],
+    image: '/assets/soundbar.webp',
+    brand: 'SAMSUNG',
+    product: 'Barra de Sonido HW-B550 2.1 con Subwoofer',
+    rating: { votes: 58, value: 4.6 },
+    price: {
+      base: { currency: 'UYU', value: 10990 },
+      offer: { currency: 'UYU', value: 8990 }
+    },
+    cuotes: {
+      quantity: 6,
+      amount: { currency: 'UYU', value: 1498 }
+    },
+    stockState: 'enough'
+  },
+  {
+    id: v4(),
+    link: '#',
+    badges: [
+      { type: 'discount', value: '-25%' }
+    ],
+    image: '/assets/mouse.webp',
+    brand: 'RAZER',
+    product: 'Mouse Gamer DeathAdder Essential 6400 DPI',
+    rating: { votes: 143, value: 4.5 },
+    price: {
+      base: { currency: 'UYU', value: 1990 },
+      offer: { currency: 'UYU', value: 1490 }
+    },
+    cuotes: null,
+    stockState: 'enough'
+  },
+  {
+    id: v4(),
+    link: '#',
+    badges: [
+      { type: 'discount', value: '-21%' }
+    ],
+    image: '/assets/stand-mixer.webp',
+    brand: 'OSTER',
+    product: 'Licuadora Clásica Vaso de Vidrio 1.5 L',
+    rating: { votes: 112, value: 4.5 },
+    price: {
+      base: { currency: 'UYU', value: 3790 },
+      offer: { currency: 'UYU', value: 2990 }
+    },
+    cuotes: {
+      quantity: 6,
+      amount: { currency: 'UYU', value: 498 }
+    },
+    stockState: 'enough'
+  },
+  {
+    id: v4(),
+    link: '#',
+    badges: [
+      { type: 'discount', value: '-17%' }
+    ],
+    image: '/assets/microwave.webp',
+    brand: 'JAMES',
+    product: 'Microondas Digital 25 L 900W',
+    rating: { votes: 89, value: 4.4 },
+    price: {
+      base: { currency: 'UYU', value: 5990 },
+      offer: { currency: 'UYU', value: 4990 }
+    },
+    cuotes: {
+      quantity: 6,
+      amount: { currency: 'UYU', value: 832 }
+    },
+    stockState: 'enough'
+  },
+  {
+    id: v4(),
+    link: '#',
+    badges: [
+      { type: 'discount', value: '-14%' }
+    ],
+    image: '/assets/washing-machine.webp',
+    brand: 'LG',
+    product: 'Lavarropas Inverter 8 kg Carga Frontal',
+    rating: { votes: 68, value: 4.7 },
+    price: {
+      base: { currency: 'UYU', value: 27990 },
+      offer: { currency: 'UYU', value: 23990 }
+    },
+    cuotes: {
+      quantity: 12,
+      amount: { currency: 'UYU', value: 1999 }
+    },
+    stockState: 'enough'
+  },
+  {
+    id: v4(),
+    link: '#',
+    badges: [
+      { type: 'discount', value: '-20%' }
+    ],
+    image: '/assets/watch.webp',
+    brand: 'XIAOMI',
+    product: 'Smartwatch Smart Band 9 AMOLED',
+    rating: { votes: 133, value: 4.6 },
+    price: {
+      base: { currency: 'UYU', value: 2490 },
+      offer: { currency: 'UYU', value: 1990 }
+    },
+    cuotes: null,
+    stockState: 'enough'
+  }
+]
+---
+
+<section class='w-full h-fit py-8 bg-promo'>
+  <h1 class='text-2xl font-bold text-slate-900 mb-3 px-6'>Ofertas del día</h1>
+  <Countdown client:idle />
+  <div class='overflow-x-auto scrollbar-none'>
+    <div class='w-full min-w-fit h-full flex gap-4 px-6 py-4'>
+      { deals.map((deal) => (
+        <ProductCard {...deal} />
+      )) }
+    </div>
+  </div>
+</section>
