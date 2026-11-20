@@ -403,14 +403,14 @@ const deals: ProductCardProps[] = [
 ]
 ---
 
-<section class='w-full h-fit py-8 bg-promo'>
+<section class='relative w-full h-fit py-8 bg-promo'>
   <h1 class='text-2xl font-bold text-slate-900 mb-3 px-6'>Ofertas del día</h1>
   <Countdown client:idle />
-  <div class='overflow-x-auto scrollbar-none'>
-    <div class='w-full min-w-fit h-full flex gap-4 px-6 py-4'>
-      { deals.map((deal) => (
-        <ProductCard {...deal} />
-      )) }
-    </div>
+  <div class='relative flex gap-4 py-4 overflow-x-auto scrollbar-none snap-mandatory snap-x scroll-smooth scroll-px-6 *:flex-[0_0_240px] *:snap-center carousel'>
+    <div aria-hidden="true" class="flex-[0_0_8px]1 snap-none!"></div>
+    { deals.map((deal) => (
+      <ProductCard {...deal} />
+    )) }
+    <div aria-hidden="true" class="flex-[0_0_8px]! snap-none!"></div>
   </div>
 </section>

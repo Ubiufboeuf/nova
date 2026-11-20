@@ -108,3 +108,46 @@ body {
   width: 100%;
   margin: 0;
 }
+
+.carousel {
+  &::scroll-button(left),
+  &::scroll-button(right) {
+    position: absolute;
+    border: 2px solid var(--color-slate-400);
+    color: var(--color-slate-700);
+    border-radius: 9999px;
+    background: var(--color-page);
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    aspect-ratio: 1 / 1;
+    transition: opacity 100ms ease;
+
+    &:hover {
+      background: color-mix(in srgb, var(--color-brand) 90%, transparent);
+    }
+  }
+
+  &::scroll-button(left) {
+    content: "❮";
+    left: 8px;
+  }
+
+  &::scroll-button(right) {
+    content: "❯";
+    right: 8px;
+  }
+
+  &::scroll-button(left):disabled,
+  &::scroll-button(right):disabled {
+    opacity: 0;
+    cursor: default;
+  }
+}
+
+.carousel > article {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 208px 450px;
+}
