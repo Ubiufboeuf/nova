@@ -1,3 +1,5 @@
+import { Icon } from '@/components/ui/Icon'
+import { IconSearch } from '@/components/ui/Icons'
 import type { ComponentChildren } from 'preact'
 
 interface Props {
@@ -7,7 +9,10 @@ interface Props {
 
 export function SearchBar ({ placeholder, button: SearchButton }: Props) {
   return (
-    <label class='relative h-full w-full flex items-center gap-4 pl-4 p-0.5 rounded-md border border-slate-300 has-[input:focus]:outline-2 has-[input:focus]:outline-slate-800'>
+    <label class='relative h-full w-full flex items-center gap-4 pl-4 p-0.5 rounded-md border border-slate-400 has-[input:focus]:outline-2 has-[input:focus]:outline-slate-800'>
+      <Icon class='size-5 text-slate-500'>
+        <IconSearch />
+      </Icon>
       <input
         placeholder={placeholder}
         class='w-full h-full text-sm outline-0'
