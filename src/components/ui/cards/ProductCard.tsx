@@ -20,7 +20,7 @@ const STOCK_LABELS: Record<ProductCardProps['stockState'], string> = {
 
 export function ProductCard ({ id, badges, image, link, brand, product, rating, price, cuotes, stockState, class: className = '' }: ProductCardProps) {
   return (
-    <article id={id} class={`${className} w-52 rounded-md bg-page`}>
+    <article id={id} class={`${className} w-52 rounded-md flex flex-col bg-page`}>
       <div class='w-full h-auto aspect-square relative p-3 border-b border-line'>
         <a href={link} class='h-full w-full'>
           <img src={image} class='h-full w-full object-contain' loading='lazy' />
@@ -32,10 +32,10 @@ export function ProductCard ({ id, badges, image, link, brand, product, rating, 
           </Icon>
         </Button>
       </div>
-      <div class='h-fit w-full flex flex-col p-3 px-4 gap-1'>
+      <div class='h-fit w-full flex flex-col p-3 px-4 gap-1 flex-1'>
         <span class='text-xs text-slate-500 uppercase tracking-wider'>{brand}</span>
         <a href={link} title={product} class='text-sm line-clamp-2 hover:text-navy transition-colors'>{product}</a>
-        <div class='flex items-center h-fit gap-1'>
+        <div class='flex items-center h-fit gap-1 mt-auto'>
           <Icon class='text-warning size-4'>
             <IconStar fill />
           </Icon>
