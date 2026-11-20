@@ -31,7 +31,7 @@ export function Button ({ children, id, class: className = '', type, href, color
   return (
     <button
       id={id}
-      class={`${className} ${btnColor} flex items-center justify-center transition-colors cursor-pointer`}
+      class={`${className} ${btnColor} flex items-center justify-center transition-colors cursor-pointer focus-visible:outline-[1.4px] focus-visible:outline-brand`}
       onClick={onClick}
     >
       {children}
